@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st 
 import plotly.express as px
 
-file_path = '/Users/danfriedman/Dropbox/TripleTen Data Science/Projects/sales-project/2023_sales_data.csv'
-df = pd.read_csv(file_path)
+
+df = pd.read_csv('2023_sales_data.csv')
 
 df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d')
 df['Month'] = df['Date'].dt.month
